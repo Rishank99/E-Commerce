@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="header">
+                <div class="search">
+                    <img src="cart1.jfif" alt="loading" >
+                    <input type="text" name="search" id="search" placeholder="Search for products" size="50">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="history.html">Order History</a></li>
+                    <li id="cart"><a href="#">Cart</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="product-catalogue">
+        <h2>Product Catalogue</h2>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search products">
+            <button type="button" onclick="searchProducts()">Search</button>
+        </div>
+        <div class="categories">
+            <button class="category" onclick="filterProducts('all')">All</button>
+            <button class="category" onclick="filterProducts('electronics')">Electronics</button>
+            <button class="category" onclick="filterProducts('clothing')">Clothing</button>
+            <button class="category" onclick="filterProducts('furniture')">Furniture</button>
+            <button class="category" onclick="filterProducts('grocery')">Grocery</button>
+        </div>
+        <div class="product-list">
+            <div class="product" data-category="electronics">
+                <a href="mobiles.html" target="_blank"><img
+                        src="https://images.unsplash.com/photo-1558885544-2defc62e2e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60g"
+                        alt="Product 1"></a>
+                <h3>Mobiles</h3>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star "></i></li>
+                </ul>
+            </div>
+            <div class="product" data-category="clothing">
+                <a href="shoes.html" target="_blank"><img
+                        src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60 alt="
+                        Product 2"></a>
+                <h3>Shoes</h3>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star "></i></li>
+                    <li><i class="fa fa-star "></i></li>
+                </ul>
+            </div>
+            <div class="product" data-category="furniture">
+                <a href="furniture.html" target="_blank"><img
+                        src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?cs=srgb&dl=pexels-martin-p%C3%A9chy-1866149.jpg&fm=jpg"
+                        alt="Product 3"></a>
+                <h3>Furniture</h3>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star "></i></li>
+                </ul>
+            </div>
+            <div class="product" data-category="grocery">
+                <a href="grocery.html" target="_blank"><img
+                        src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JvY2VyeXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+                        alt="Product 4"></a>
+                <h3>Grocery</h3>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

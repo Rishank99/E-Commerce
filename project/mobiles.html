@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="header">
+                <div class="search">
+                    <img src="cart1.jfif" alt="loading">
+                    <input type="text" name="search" id="search" placeholder="Search for products" size="50">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="history.html">Order History</a></li>
+                    <li id="cart"><a href="#">Cart</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="img/1.jpg" alt="loading" width="100%" id="MainImg" height="400">
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="img/1.jpg" alt="loading" width="100%" class="small-img" height="120">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/2.jpg" alt="loading" width="100%" class="small-img" height="120">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/3.jpg" alt="loading" width="100%" class="small-img" height="120">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/4.jpg" alt="loading" width="100%" class="small-img" height="120">
+                </div>
+            </div>
+        </div>
+
+        <div class="single-pro-details">
+            <h6>Categories / Mobiles</h6>
+            <h4>Vivo T2x 5G (Aurora Gold, 128 GB) (8 GB RAM)</h4>
+            <h2>Rs 16,000</h2>
+            <button class="normal">Add To Cart</button>
+            <h4>Description:</h4>
+            <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta distinctio et sunt
+                repellat
+                explicabo, dolore nulla. Delectus quod numquam at explicabo, omnis libero, voluptatibus esse
+                exercitationem odit dolorem temporibus a repudiandae quidem? Doloremque aspernatur nobis laborum
+                possimus amet culpa eaque quod illo explicabo eius ipsum sed ipsam ex mollitia adipisci earum dicta,
+                eveniet ullam repellendus! Eveniet fugiat quibusdam perspiciatis, fugit modi esse delectus quia
+                labore, exercitationem porro, debitis maxime expedita?</span>
+            <h4>Review</h4>
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star "></i></li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sequi dolore qui quia commodi
+                iusto eligendi quisquam quaerat totam sed?</p>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        let Mainimg = document.getElementById("MainImg");
+        let smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function () {
+            Mainimg.src = smallimg[0].src;
+        }
+
+        smallimg[1].onclick = function () {
+            Mainimg.src = smallimg[1].src;
+        }
+
+        smallimg[2].onclick = function () {
+            Mainimg.src = smallimg[2].src;
+        }
+
+        smallimg[3].onclick = function () {
+            Mainimg.src = smallimg[3].src;
+        }
+
+        $(document).ready(function () {
+            $(".normal").on({
+
+                click: function () {
+                    $(this).css("background-color", "green");
+                }
+            });
+
+            $(".description").hide(1000);
+            $(".description").show(1000);
+
+            $('h4').hover(
+                function () {
+                    $(this).stop().animate(
+                        {
+                            fontSize: '30px'
+                        },
+                        300
+                    );
+                },
+                function () {
+                    $(this).stop().animate(
+                        {
+                            fontSize: '24px'
+                        },
+                        300
+                    );
+                }
+            );
+
+        });
+    </script>
+</body>
+
+</html>

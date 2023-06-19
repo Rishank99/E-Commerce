@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="header">
+                <div class="search">
+                    <img src="cart1.jfif" alt="loading" >
+                    <input type="text" name="search" id="search" placeholder="Search for products" size="50">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Category</a></li>
+                    <li><a href="history.html">Order History</a></li>
+                    <li><a href="#" id="cart-menu">Cart</a></li>
+                </ul>
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- Content -->
+                    <div class="cart-content">
+                        <div class="cart-box">
+                            <img src="img/2.jpg" alt="loading" class="cart-img" >
+                            <div class="detail-box">
+                                <div class="cart-product-title">Mobile</div>
+                                <div class="cart-price">Rs 16,000</div>
+                            </div>
+                            <!-- Remove -->
+                            <button type="button" class="remove">Remove</button>
+                        </div>
+                    </div>
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">Rs 0</div>
+                    </div>
+                    <!-- Buy Button -->
+                    <button type="button" class="btn-buy">Buy Now</button>
+                    <!-- Cart Close -->
+                    <button type="button" class="close">Close</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Registration Form -->
+    <div class="container">
+        <div class="register">
+            <h1>E-Commerce Registration Form</h1>
+            <form id="register" action="backend.php">
+                <label for="fname">First Name : </label>
+                <br>
+                <input type="text" name="name" placeholder="Enter your first name"><br>
+                <br>
+                <label for="lname">Last Name :</label>
+                <br><input type="text" name="name" placeholder="Enter your last name"><br>
+                <br>
+                <label for="date">Birth Date :</label>
+                <br><input type="date" name="myDate"><br>
+                <br>
+                <label for="gender">Gender : </label><br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="myGender" class="male">Male
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="myGender" class="female">Female
+                 &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="myGender" class="other">Other<br>
+                <br>
+                <label for="email">Email :</label>
+                <br><input type="email" name="myEmail" placeholder="Enter your valid Email"><br>
+                <br>
+                <label for="number">Phone Number : </label>
+                <br> <input type="text" name="myNumber" placeholder="Enter a valid phone number"><br>
+                <br>
+                <label for="address">Address :</label>
+                <br><input type="text" name="myAddress" placeholder="Enter a valid address"><br>
+                <br>
+                <label for="qualification">Qualification : </label>
+                <br></yourself:br><textarea name="myText" cols="30" row="10"></textarea><br>
+                <br>
+                <input id="submit" type="submit" value="Submit Now">
+            </form>
+        </div>
+    </div>
+   
+
+    <!-- Product-Catalogue -->
+    <section class="product-catalogue">
+        <h2>Product Catalogue</h2>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search products">
+            <button type="button" onclick="searchProducts()">Search</button>
+        </div>
+        <div class="categories">
+            <button class="category" onclick="filterProducts('all')">All</button>
+            <button class="category" onclick="filterProducts('electronics')">Electronics</button>
+            <button class="category" onclick="filterProducts('clothing')">Clothing</button>
+            <button class="category" onclick="filterProducts('furniture')">Furniture</button>
+            <button class="category" onclick="filterProducts('grocery')">Grocery</button>
+        </div>
+        <div class="product-list">
+            <div class="product" data-category="electronics">
+                <a href="mobiles.html" target="_blank"><img
+                        src="https://images.unsplash.com/photo-1558885544-2defc62e2e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60g"
+                        alt="Product 1"></a>
+                <h3>Mobiles</h3>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star "></i></li>
+                </ul>
+            </div>
+            <div class="product" data-category="clothing">
+                <a href="shoes.html" target="_blank"><img
+                        src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60 alt="
+                        Product 2"></a>
+                <h3>Shoes</h3>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star "></i></li>
+                    <li><i class="fa fa-star "></i></li>
+                </ul>
+            </div>
+            <div class="product" data-category="furniture">
+                <a href="furniture.html" target="_blank"><img
+                        src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?cs=srgb&dl=pexels-martin-p%C3%A9chy-1866149.jpg&fm=jpg"
+                        alt="Product 3"></a>
+                <h3>Furniture</h3>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star "></i></li>
+                </ul>
+            </div>
+            <div class="product" data-category="grocery">
+                <a href="grocery.html"><img
+                        src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JvY2VyeXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+                        alt="Product 4"></a>
+                <h3>Grocery</h3>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h3 class="sub-heading"> Customer's Review </h3>
+    <h1 class="heading"> What they say </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <div class="user-info">
+                        <h3>Amit Singh</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores inventore atque nihil nemo mollitia commodi dolorem distinctio laborum facere nulla necessitatibus id perferendis reiciendis voluptatibus illo ea, qui modi ab.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    
+                    <div class="user-info">
+                        <h3>Shreya Gupta</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias in, tenetur praesentium veritatis iure exercitationem hic, sapiente ullam eum suscipit voluptatum ipsam incidunt aliquid cupiditate eaque quo, repudiandae fuga molestias.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                  
+                    <div class="user-info">
+                        <h3>Ajay</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, aliquam fugit. Reiciendis velit esse explicabo est, molestiae laudantium dignissimos quia ipsa distinctio nemo, obcaecati corrupti eveniet officiis magni ipsam ullam?</p>
+            </div>
+
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- review section ends -->
+
+<script src="script.js"></script>
+</body>
+
+</html>
